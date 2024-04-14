@@ -1,0 +1,79 @@
+POST http://localhost:5000/user/register
+Content-Type: application/json
+
+{
+    "username": "akshay",
+    "email": "akshay@email.com",
+    "password": "Akshay@123",
+    "age": 22
+}
+
+###
+
+POST http://localhost:5000/user/login
+Content-Type: application/json
+
+{
+    "email": "akshay@email.com",
+    "password": "Akshay@123"
+}
+
+###
+
+PUT http://localhost:5000/user/update
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFrc2hheUBlbWFpbC5jb20iLCJpYXQiOjE3MTMxMDU3MzIsImV4cCI6MTcxNTY5NzczMn0.WC-B6GYW830jV3XtXEc73_YHk6RpUunDD23yE6uC3ek
+
+{
+    "username": "JohnDoe",
+    "email": "john@doe.com",
+    "password": "John@123",
+    "age": 22
+}
+
+###
+
+// diary routes
+
+GET http://localhost:5000/diary/get
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFrc2hheUBlbWFpbC5jb20iLCJpYXQiOjE3MTMxMDU3MzIsImV4cCI6MTcxNTY5NzczMn0.WC-B6GYW830jV3XtXEc73_YHk6RpUunDD23yE6uC3ek
+
+###
+
+GET http://localhost:5000/diary/get/ec825ee2-39f3-40b9-80ea-bf5c46c40c4a
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFrc2hheUBlbWFpbC5jb20iLCJpYXQiOjE3MTMxMDU3MzIsImV4cCI6MTcxNTY5NzczMn0.WC-B6GYW830jV3XtXEc73_YHk6RpUunDD23yE6uC3ek
+###
+
+POST http://localhost:5000/diary/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFrc2hheUBlbWFpbC5jb20iLCJpYXQiOjE3MTMxMDU3MzIsImV4cCI6MTcxNTY5NzczMn0.WC-B6GYW830jV3XtXEc73_YHk6RpUunDD23yE6uC3ek
+
+{
+    "title": "My second diary",
+    "description": "This is my second diary entry",
+    "date": "2021-10-01",
+    "location": "bangalore",
+    "photos": ["http://photo1.com", "http://photo2.com"]
+}
+
+###
+
+PUT http://localhost:5000/diary/update/4c1cddde-50d3-46be-a183-3f5f2d291f01
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFrc2hheUBlbWFpbC5jb20iLCJpYXQiOjE3MTMxMDU3MzIsImV4cCI6MTcxNTY5NzczMn0.WC-B6GYW830jV3XtXEc73_YHk6RpUunDD23yE6uC3ek
+
+{
+    "title": "My first diary",
+    "description": "This is my updated diary entry",
+    "date": "2021-10-01",
+    "location": "bangalore",
+    "photos": ["http://photo1.com", "http://photo2.com"]
+}
+
+###
+
+DELETE http://localhost:5000/diary/delete/4c1cddde-50d3-46be-a183-3f5f2d291f01
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFrc2hheUBlbWFpbC5jb20iLCJpYXQiOjE3MTMxMDU3MzIsImV4cCI6MTcxNTY5NzczMn0.WC-B6GYW830jV3XtXEc73_YHk6RpUunDD23yE6uC3ek
+###
