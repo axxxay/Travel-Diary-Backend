@@ -13,11 +13,13 @@
 
 The Travel Diary Platform Backend is a Node.js application built with Express.js and Sequelize ORM, providing RESTful API endpoints for managing user registration, authentication, profile management, and travel diary entries. The application demonstrates the application of Object-Oriented Programming (OOP) concepts to create modular, maintainable, and scalable code.
 
+### Live link : [https://travel-diary-backend-eixf.onrender.com](https://travel-diary-backend-eixf.onrender.com)
+
 ## Setup
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/travel-diary-backend.git
+   git clone https://github.com/axxxay/Travel-Diary-Backend.git
    cd travel-diary-backend
    ```
 2. **Install dependencies:**
